@@ -1,0 +1,40 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "VSDBG_Attach",
+			"type": "cppvsdbg",
+			"request": "attach",
+			"processId": "${command:pickProcess}",
+			"logging": {
+				"moduleLoad": false,
+				"trace": true
+			},
+			"visualizerFile": "c:\\Users\\BH2WFR\\AppData\\Roaming\\Code\\User\\workspaceStorage\\77938428774ef8362da8877e2ac5f43c\\tonka3000.qtvsctools\\qt.natvis.xml"
+		},
+		{
+			"name": "VSDBG_Launch",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${command:cmake.launchTargetPath}",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${command:cmake.launchTargetDirectory}",
+			"console": "externalTerminal",
+			"logging": {
+				"moduleLoad": false,
+				"trace": true
+			},
+			"environment": [
+				{
+					"name": "PATH",
+					"value": "${env:PATH};G:/Qt/6.7.0/msvc2019_64;"
+				}
+			],
+			"visualizerFile": "c:\\Users\\BH2WFR\\AppData\\Roaming\\Code\\User\\workspaceStorage\\77938428774ef8362da8877e2ac5f43c\\tonka3000.qtvsctools\\qt.natvis.xml"
+		}
+	]
+} 

@@ -1,0 +1,57 @@
+{
+	"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+	
+    "qtConfigure.qtKitDir": "D:/QT/6.6.0/msvc2019_64",
+	//* =================== 在 vscode 文件目录 搜索功能中 隐藏无关文件
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.vs": true,
+		"**/3rdLib" : true,
+		"**/3rdLibs" : true,
+		"**/3rdlib" : true,
+		"**/3rdlibs" : true,
+		"**/build" : false,
+		"**/install" : true,
+		"**/out" : true,
+		"**/cmake_install.cmake": true,
+		"**/*.cmake.in" : true,
+		"**/CMakeFiles": true,
+		"**/assets" : true, //typora markdown 图片
+		"**/desktop.ini": true,
+		"**/CMakeLists.txt.user": true,
+	},
+	"search.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.vs": true,
+		"3rdLib" : true,
+		"3rdLibs" : true,
+		"3rdlib" : true,
+		"3rdlibs" : true,
+		"build" : true,
+		"install" : true,
+		"out" : true,
+		"**/cmake_install.cmake": true,
+		"**/*.cmake.in" : true,
+		"**/CMakeFiles": true,
+		"**/assets" : true, //typora markdown 图片
+		"**/desktop.ini": true,
+		"**/CMakeLists.txt.user": true,
+	},
+	"clangd.arguments": [
+		"--background-index",
+		"--compile-commands-dir=build",
+		"-j=12",
+		"--clang-tidy",
+		 "--all-scopes-completion",
+		 "--completion-style=detailed",
+		 "--header-insertion=iwyu",
+		 "--function-arg-placeholders",
+		 "--pch-storage=disk",
+	],
+	"cmake.configureSettings": {
+		//vcpkg 工具链
+		"CMAKE_TOOLCHAIN_FILE": "G:/workspace-G/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake"
+	},
+}
