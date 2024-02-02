@@ -1,10 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <string>
-// #include <cstdlib>
-// #include <QApplication>
-// #include <QMainWindow>
-// #include 
+#include <cstdlib>
+#include <QApplication>
+#include <mainwindow.h>
 extern "C" {
     #include <libavcodec/avcodec.h>
     #include <libavformat/avformat.h>
@@ -15,12 +14,13 @@ void test_lib();
 
 int main(int argc, char *argv[]) 
 {
-    // QApplication a(argc, argv);
-    // QMainWindow w;
-    // w.show();
+	QApplication app(argc, argv);
+
+	MainWindow* window = new MainWindow();
+	window->show();
 
     test_lib();
-    return 0;
+    return app.exec();
 }
 
 
